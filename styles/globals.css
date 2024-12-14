@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Bold";
+  font-style: normal;
+  src: url("/fonts/GmarketSansTTFBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Medium";
+  font-style: normal;
+  src: url("/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Light";
+  font-style: normal;
+  src: url("/fonts/GmarketSansTTFLight.ttf") format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  font-family: Medium, -apple-system, sans-serif;
+}
+
+body {
+  font-family: Medium;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+input,
+textarea,
+select,
+button,
+li {
+  all: unset;
+}
+
+:root {
+  --clr-dark: #0b2545;
+  --clr-dark-opacity: rgba(11, 37, 69, 0.5);
+  --clr-gray: #494949;
+  --clr-light: #ffffff;
+
+  --fs-h1: 2.35rem;
+  --fs-h2: 1.35rem;
+  --fs-h3: 1.2rem;
+  --fs-h4: 1rem;
+  --fs-h5: 0.9rem;
+  --fs-input: 0.9rem;
+
+  --default-padding: 1em;
+}
