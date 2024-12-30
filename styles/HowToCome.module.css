@@ -28,6 +28,10 @@
   gap: 6px;
 }
 
+.howToCome__bus {
+  min-width: 46px;
+}
+
 .howToCome__linespan {
   display: inline-block;
 }
