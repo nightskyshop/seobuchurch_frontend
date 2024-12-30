@@ -16,6 +16,29 @@
   src: url("/fonts/GmarketSansTTFLight.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "BookBold";
+  font-style: normal;
+  src: url("/fonts/BookkMyungjo_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BookLight";
+  font-style: normal;
+  src: url("/fonts/BookkMyungjo_Light.ttf") format("truetype");
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -30,6 +53,8 @@ body {
 }
 
 a {
+  all: unset;
+  cursor: pointer;
   text-decoration: none;
   color: var(--clr-dark);
 }
@@ -43,17 +68,24 @@ li {
 }
 
 :root {
-  --clr-dark: #0b2545;
+  --clr-dark: #000000;
   --clr-dark-opacity: rgba(11, 37, 69, 0.5);
-  --clr-gray: #494949;
+  --clr-dark-gray: #1f1f1f;
+  --clr-light-gray: #f0eded;
   --clr-light: #ffffff;
 
-  --fs-h1: 2.35rem;
-  --fs-h2: 1.35rem;
+  --fs-h1: 2.1rem;
+  --fs-h2: 1.6rem;
   --fs-h3: 1.2rem;
-  --fs-h4: 1rem;
+  --fs-h4: 1.1rem;
   --fs-h5: 0.9rem;
   --fs-input: 0.9rem;
 
-  --default-padding: 1em;
+  --default-padding: 5em;
+}
+
+@media screen and (max-width: 1160px) {
+  :root {
+    --default-padding: 1.5em;
+  }
 }

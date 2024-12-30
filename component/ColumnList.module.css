@@ -1,0 +1,38 @@
+.column_table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0.5em;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.column_thead,
+.column_tbody,
+.column_tbody {
+  min-width: 400px;
+  width: 100%;
+}
+.column_thead th,
+.column_tbody th,
+.column_tbody td {
+  font-size: var(--fs-h4);
+  text-align: left;
+  padding: 0.5em;
+}
+
+.column_thead {
+  background-color: var(--clr-light-gray);
+}
+
+.column_thead a {
+  display: block;
+}
+
+.column_thead th {
+  font-family: "Bold";
+}
+
+.column_tbody {
+  gap: 1.25em;
+}

@@ -1,0 +1,39 @@
+.howToCome__box {
+  padding: 1em 2em;
+  border: 1px solid var(--clr-dark);
+  margin-top: 1em;
+}
+
+.howToCome__box h3 {
+  font-size: var(--fs-h3);
+}
+
+.howToCome__box p {
+  font-size: var(--fs-h3);
+  margin-top: 0.5em;
+  line-height: 30px;
+}
+
+.howToCome__box span {
+  font-family: "Light";
+}
+
+.howToCome__textbox1 {
+  display: flex;
+  gap: 15px;
+}
+
+.howToCome__textbox2 {
+  display: flex;
+  gap: 6px;
+}
+
+.howToCome__linespan {
+  display: inline-block;
+}
+
+@media screen and (max-width: 652px) {
+  .howToCome__textbox1 {
+    flex-direction: column;
+  }
+}

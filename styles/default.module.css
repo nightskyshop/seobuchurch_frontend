@@ -1,0 +1,50 @@
+.default__main {
+  padding: 0 var(--default-padding);
+  margin: 1.5em auto;
+  max-width: 850px;
+}
+
+.default__title {
+  font-family: "Bold";
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin: 1.5em 0 0.5em;
+}
+
+.default__hr {
+  width: 100px;
+  height: 2px;
+  margin: 0.5em auto 0;
+  background-color: var(--clr-dark);
+}
+
+.default__subTitle {
+  font-family: "Medium";
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin: 1.5em 0 0.5em;
+}
+
+.default__bar {
+  display: flex;
+
+  margin: 2em 0 1em;
+}
+
+.default__bar button {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 0.25em 0.5em;
+  height: 19px;
+}
+
+.default__search {
+  margin-left: auto;
+}
+
+.default__search input {
+  border: 1px solid var(--clr-dark);
+  margin-right: 0.5em;
+  height: 19px;
+  width: 100%x;
+}

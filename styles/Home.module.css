@@ -1,0 +1,113 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.home__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 0 1em;
+  background: linear-gradient(to right, #000000, rgb(77, 77, 77) 50%, #000000);
+}
+
+.home__header h1 {
+  color: white;
+  text-align: center;
+  font-family: "BookBold";
+  font-size: var(--fs-h1);
+  letter-spacing: 3px;
+  animation: fadeInUp 1s;
+}
+
+.home__vision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em 3em;
+  animation: fadeInUp 1s;
+}
+
+.vision__caption {
+  font-family: "BookBold";
+  font-size: var(--fs-h3);
+  text-align: center;
+  margin-top: 3em;
+}
+
+.vision__header {
+  font-family: "BookBold";
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.vision__content {
+  font-family: "BookLight";
+  font-size: var(--fs-h3);
+  text-align: center;
+  margin-top: 2em;
+  line-height: 33px;
+}
+
+.vision__content span {
+  font-family: "BookBold";
+}
+
+.vision__more {
+  display: block;
+  width: 50px;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  font-family: "Light";
+  font-size: var(--fs-h5);
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.home__section_background {
+  background-color: var(--clr-light-gray);
+  padding: 0.25em 0;
+}
+
+.home__section {
+  display: grid;
+  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  max-width: 800px;
+  margin: 3em auto;
+}
+
+.section__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: center;
+  border: 1px solid var(--clr-dark);
+  animation: fadeInUp 1s;
+}
+
+.section__box img {
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.section__box h3 {
+  font-family: "BookLight";
+  font-size: var(--fs-h3);
+}
+
+.section__box a {
+  font-family: "BookLight";
+  font-size: var(--fs-h5);
+}

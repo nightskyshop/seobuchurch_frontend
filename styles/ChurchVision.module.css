@@ -1,0 +1,46 @@
+.vision__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em 3em;
+  animation: fadeInUp 1s;
+}
+
+.main__caption {
+  font-family: "Light";
+  font-size: var(--fs-h3);
+  text-align: center;
+  margin-top: 3em;
+}
+
+.main__header {
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.main__quote1 {
+  display: block;
+  margin: 2.5em auto 0;
+}
+
+.main__content {
+  font-size: var(--fs-h3);
+  text-align: center;
+  margin-top: 1.5em;
+  line-height: 35px;
+}
+
+.main__content span {
+  font-family: "Bold";
+}
+
+.main__verse {
+  font-family: "Light";
+  margin: 0.5em auto 0;
+}
+
+.main__quote2 {
+  display: block;
+  margin: 1.5em auto 0;
+}

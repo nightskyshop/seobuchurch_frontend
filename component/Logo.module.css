@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo__group {
+  font-size: var(--fs-h5);
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__group span {
+  display: inline-block;
+  font-family: "Light";
+}
+
+.logo__name {
+  font-size: var(--fs-h1);
+  text-align: justify;
+  width: 130px;
+}

@@ -10,6 +10,11 @@ export default function App({ Component, pageProps }) {
     <QueryClientProvider client={queryClient}>
       <Header />
       <Component {...pageProps} />
+
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=60d8ab9208d84b176f038e5844af2e74"
+      ></script>
     </QueryClientProvider>
   );
 }
