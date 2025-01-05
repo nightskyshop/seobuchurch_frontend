@@ -27,7 +27,7 @@ export default function Header() {
         <ul className={styles.header__btns}>
           <li>
             <Link
-              href="/"
+              href="/church-info/church-vision"
               className={
                 router.asPath.includes("church-info") ? styles.selected : null
               }
@@ -47,7 +47,7 @@ export default function Header() {
                 교회 비전
               </Link>
               <Link href="/">교회연혁</Link>
-              <Link href="/">담임목사 소개</Link>
+              <Link href="/church-info/greetings">담임목사 인사말</Link>
               <Link href="/">섬기는 분들</Link>
               <Link href="/">예배안내</Link>
               <Link
@@ -102,6 +102,16 @@ export default function Header() {
                 금요기도회
               </Link>
               <Link
+                href="/sermon-column/morning-prayer"
+                className={
+                  router.asPath.includes("morning-prayer")
+                    ? styles.selected
+                    : null
+                }
+              >
+                새벽기도회
+              </Link>
+              <Link
                 href="/sermon-column/special-sermon"
                 className={
                   router.asPath.includes("special-sermon")
@@ -151,7 +161,7 @@ export default function Header() {
             </div>
           </li>
           <li>
-            <Link href="/">코이노이아</Link>
+            <Link href="/">코이노니아</Link>
 
             <div className={styles.header__btns_dropdown}>
               <Link href="/">주요일정</Link>

@@ -4,6 +4,12 @@
   max-width: 850px;
 }
 
+.default__wordpage {
+  padding: 0 var(--default-padding);
+  margin: 1.5em auto;
+  max-width: 750px;
+}
+
 .default__title {
   font-family: "Bold";
   font-size: var(--fs-h1);

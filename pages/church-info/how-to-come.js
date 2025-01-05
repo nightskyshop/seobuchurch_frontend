@@ -1,10 +1,15 @@
 import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/HowToCome.module.css";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
+import Head from "next/head";
 
 export default function HowToCome() {
   return (
     <div className={default_styles.default__main}>
+      <Head>
+        <title>오시는 길 - 서부교회</title>
+      </Head>
+
       <h1 className={default_styles.default__title}>오시는 길</h1>
       <hr className={default_styles.default__hr} />
 
