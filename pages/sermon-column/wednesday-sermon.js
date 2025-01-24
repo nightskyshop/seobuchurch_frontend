@@ -2,6 +2,7 @@ import SermonList from "@/component/SermonList";
 import default_styles from "@/styles/default.module.css";
 import axios from "axios";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getServerSideProps() {
   const {
@@ -27,7 +28,9 @@ export default function WeDnesdaySermon({ default_sermons, totalPages }) {
       <hr className={default_styles.default__hr} />
 
       <div className={default_styles.default__bar}>
-        <button>글쓰기</button>
+        <Link href="/sermon-column/sermon/new?worshipTime=수요예배">
+          글쓰기
+        </Link>
 
         <form className={default_styles.default__search}>
           <input type="text" />

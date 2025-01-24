@@ -36,83 +36,103 @@ export default function Home() {
       <div className={styles.home__section_background}>
         <div className={styles.home__section}>
           <div className={styles.section__box}>
-            <Link href="/sermon-column/sunday-sermon">
-              <Image src="/btns/1.png" width={100} height={100} />
-            </Link>
-            <Link href="/sermon-column/sunday-sermon">
+            <Link
+              href="/sermon-column/sunday-sermon"
+              className={styles.section__link}
+            >
+              <Image
+                src="/btns/1.png"
+                width={100}
+                height={100}
+                alt="주일설교"
+              />
               <h3>주일설교</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/sermon-column/sunday-sermon">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/2.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image
+                src="/btns/2.png"
+                width={100}
+                height={100}
+                alt="교회소식"
+              />
               <h3>교회소식</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/3.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image
+                src="/btns/3.png"
+                width={100}
+                height={100}
+                alt="예배안내"
+              />
               <h3>예배안내</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/4.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image src="/btns/4.png" width={100} height={100} alt="공동체" />
               <h3>공동체</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/5.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image src="/btns/5.png" width={100} height={100} alt="찬양" />
               <h3>찬양</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/6.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image
+                src="/btns/6.png"
+                width={100}
+                height={100}
+                alt="서부교회 이야기"
+              />
               <h3>서부교회 이야기</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/">
-              <Image src="/btns/7.png" width={100} height={100} />
-            </Link>
-            <Link href="/">
+            <Link href="/" className={styles.section__link}>
+              <Image
+                src="/btns/7.png"
+                width={100}
+                height={100}
+                alt="선교 및 훈련"
+              />
               <h3>선교 및 훈련</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/">바로가기</Link>
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/church-info/how-to-come">
-              <Image src="/btns/8.png" width={100} height={100} />
-            </Link>
-            <Link href="/church-info/how-to-come">
+            <Link
+              href="/church-info/how-to-come"
+              className={styles.section__link}
+            >
+              <Image
+                src="/btns/8.png"
+                width={100}
+                height={100}
+                alt="오시는 길"
+              />
               <h3>오시는 길</h3>
+              <span className={styles.link_text}>바로가기</span>
             </Link>
-            <Link href="/church-info/how-to-come">바로가기</Link>
           </div>
         </div>
       </div>

@@ -46,10 +46,26 @@ export default function Header() {
               >
                 교회 비전
               </Link>
-              <Link href="/">교회연혁</Link>
-              <Link href="/church-info/greetings">담임목사 인사말</Link>
-              <Link href="/">섬기는 분들</Link>
-              <Link href="/">예배안내</Link>
+              <Link href="/not-ready">*교회연혁</Link>
+              <Link
+                href="/church-info/greetings"
+                className={
+                  router.asPath.includes("greetings") ? styles.selected : null
+                }
+              >
+                담임목사 인사말
+              </Link>
+              <Link href="/not-ready">*섬기는 분들</Link>
+              <Link
+                href="/church-info/worship-info"
+                className={
+                  router.asPath.includes("worship-info")
+                    ? styles.selected
+                    : null
+                }
+              >
+                예배안내
+              </Link>
               <Link
                 href="/church-info/how-to-come"
                 className={
@@ -79,7 +95,7 @@ export default function Header() {
                     : null
                 }
               >
-                주일설교
+                주일예배
               </Link>
               <Link
                 href="/sermon-column/wednesday-sermon"
@@ -132,43 +148,43 @@ export default function Header() {
             </div>
           </li>
           <li>
-            <Link href="/">공동체</Link>
+            <Link href="/not-ready">*공동체</Link>
 
             <div className={styles.header__btns_dropdown}>
               <p>다음세대</p>
-              <Link href="/">유•초등부</Link>
-              <Link href="/">청소년부</Link>
-              <Link href="/">청년부</Link>
+              <Link href="/not-ready">*유•초등부</Link>
+              <Link href="/not-ready">*청소년부</Link>
+              <Link href="/not-ready">*청년부</Link>
 
               <p className={styles.marginTop}>엘더세대</p>
-              <Link href="/">사랑방</Link>
-              <Link href="/">엘더모임</Link>
+              <Link href="/not-ready">*사랑방</Link>
+              <Link href="/not-ready">*엘더모임</Link>
             </div>
           </li>
           <li>
-            <Link href="/">선교 및 훈련</Link>
+            <Link href="/not-ready">*선교 및 훈련</Link>
 
             <div className={styles.header__btns_dropdown}>
               <p>선교</p>
-              <Link href="/">협력 선교사</Link>
-              <Link href="/">협력 교회&단체</Link>
-              <Link href="/">기도후원</Link>
+              <Link href="/not-ready">*협력 선교사</Link>
+              <Link href="/not-ready">*협력 교회&단체</Link>
+              <Link href="/not-ready">*기도후원</Link>
 
               <p className={styles.marginTop}>훈련</p>
-              <Link href="/">새가족반</Link>
-              <Link href="/">제자반</Link>
-              <Link href="/">사랑방 섬김이 모임</Link>
+              <Link href="/not-ready">*새가족반</Link>
+              <Link href="/not-ready">*제자반</Link>
+              <Link href="/not-ready">*사랑방 섬김이 모임</Link>
             </div>
           </li>
           <li>
-            <Link href="/">코이노니아</Link>
+            <Link href="/not-ready">*코이노니아</Link>
 
             <div className={styles.header__btns_dropdown}>
-              <Link href="/">주요일정</Link>
-              <Link href="/">교회소식</Link>
-              <Link href="/">나눔터</Link>
-              <Link href="/">갤러리</Link>
-              <Link href="/">자료실</Link>
+              <Link href="/not-ready">*주요일정</Link>
+              <Link href="/not-ready">*교회소식</Link>
+              <Link href="/not-ready">*나눔터</Link>
+              <Link href="/not-ready">*갤러리</Link>
+              <Link href="/not-ready">*자료실</Link>
             </div>
           </li>
         </ul>

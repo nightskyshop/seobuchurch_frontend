@@ -43,13 +43,13 @@ export default function SermonDetail({ sermon }) {
         </p>
         <iframe
           className={styles.sermon__youtube}
-          width="560"
+          width="100%"
           height="315"
           src={sermon.url}
         ></iframe>
 
         <div>
-          {sermon.worshipTime == "주일 설교" ? (
+          {sermon.worshipTime == "주일예배" ? (
             <Link
               className={styles.sermon__goToList}
               href="/sermon-column/sunday-sermon"

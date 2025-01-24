@@ -1,0 +1,47 @@
+.worshipInfo_table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1em;
+  margin: 4em auto 0;
+  width: 100%;
+  max-width: 550px;
+  overflow-x: scroll;
+}
+
+.worshipInfo_thead,
+.worshipInfo_tbody,
+.worshipInfo_tbody {
+  min-width: 400px;
+  width: 100%;
+}
+
+.worshipInfo_thead th,
+.worshipInfo_tbody th,
+.worshipInfo_tbody td {
+  font-size: var(--fs-h4);
+  text-align: left;
+  padding: 1em 1.5em;
+}
+
+.worshipInfo_thead a {
+  display: block;
+}
+
+.worshipInfo_thead th {
+  font-family: "Bold";
+}
+
+.worshipInfo_tbody tr {
+  border-top: 1px solid var(--clr-dark);
+  padding: 1em 0;
+}
+
+.worshipInfo_tbody tr td:nth-child(1) div,
+.worshipInfo_tbody tr td:nth-child(2) div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.worshipInfo_tbody td.red {
+  color: red;
+}

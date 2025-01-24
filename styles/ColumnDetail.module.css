@@ -31,6 +31,23 @@
   white-space: pre-line;
 }
 
+.column__content :global(.ql-align-center) {
+  text-align: center;
+}
+
+.column__content :global(.ql-align-right) {
+  text-align: right;
+}
+
+.column__content :global(.ql-align-justify) {
+  text-align: justify;
+}
+
+/* 기본 왼쪽 정렬 */
+.column__content :global(.ql-align-left) {
+  text-align: left;
+}
+
 .column__goToList {
   display: block;
   height: 23px;

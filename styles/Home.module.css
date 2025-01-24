@@ -111,3 +111,15 @@
   font-family: "BookLight";
   font-size: var(--fs-h5);
 }
+
+.section__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.link_text {
+  font-family: "BookLight";
+  font-size: var(--fs-h5);
+}

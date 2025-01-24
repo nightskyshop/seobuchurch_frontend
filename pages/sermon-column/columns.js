@@ -2,6 +2,7 @@ import ColumnList from "@/component/ColumnList";
 import default_styles from "@/styles/default.module.css";
 import axios from "axios";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getServerSideProps() {
   const {
@@ -27,7 +28,7 @@ export default function Column({ default_columns, totalPages }) {
       <hr className={default_styles.default__hr} />
 
       <div className={default_styles.default__bar}>
-        <button>글쓰기</button>
+        <Link href="/sermon-column/column/new">글쓰기</Link>
 
         <form className={default_styles.default__search}>
           <input type="text" />

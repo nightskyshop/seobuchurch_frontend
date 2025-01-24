@@ -37,11 +37,13 @@
   margin: 2em 0 1em;
 }
 
-.default__bar button {
+.default__bar button,
+.default__bar a {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   padding: 0.25em 0.5em;
   height: 19px;
+  cursor: pointer;
 }
 
 .default__search {

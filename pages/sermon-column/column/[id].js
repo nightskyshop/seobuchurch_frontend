@@ -1,5 +1,6 @@
 import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/ColumnDetail.module.css";
+import "react-quill/dist/quill.snow.css";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
@@ -44,12 +45,15 @@ export default function ColumnDetail({ column }) {
 
         <hr className={styles.column__hr} />
 
-        <p className={styles.column__content}>{column.content}</p>
+        <div
+          className={styles.column__content}
+          dangerouslySetInnerHTML={{ __html: column.content }}
+        ></div>
 
         <div>
           <Link
             className={styles.column__goToList}
-            href="/column-column/columns"
+            href="/sermon-column/columns"
           >
             목록
           </Link>

@@ -3,11 +3,12 @@ import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/SundaySermon.module.css";
 import axios from "axios";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getServerSideProps() {
   const {
     data: { content: default_sermons, totalPages },
-  } = await axios.get(`/sermon?pageNo=0&worshipTime=주일 설교`);
+  } = await axios.get(`/sermon?pageNo=0&worshipTime=주일예배`);
 
   let currentSermon;
   try {
@@ -34,13 +35,13 @@ export default function SundaySermon({
   return (
     <div className={default_styles.default__main}>
       <Head>
-        <title>주일 설교 - 고신교회</title>
+        <title>주일예배 - 고신교회</title>
       </Head>
 
-      <h1 className={default_styles.default__title}>주일 설교</h1>
+      <h1 className={default_styles.default__title}>주일예배</h1>
       <hr className={default_styles.default__hr} />
 
-      <h2 className={default_styles.default__subTitle}>이번 주 주일 설교</h2>
+      <h2 className={default_styles.default__subTitle}>이번 주 주일예배</h2>
 
       {currentSermon ? (
         <iframe
@@ -52,7 +53,9 @@ export default function SundaySermon({
       ) : null}
 
       <div className={default_styles.default__bar}>
-        <button>글쓰기</button>
+        <Link href="/sermon-column/sermon/new?worshipTime=주일예배">
+          글쓰기
+        </Link>
 
         <form className={default_styles.default__search}>
           <input type="text" />
