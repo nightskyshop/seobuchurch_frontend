@@ -46,7 +46,7 @@ export default function SundaySermon({
       {currentSermon ? (
         <iframe
           className={styles.sundaySermon__youtube}
-          width="560"
+          width="100%"
           height="315"
           src={currentSermon.url}
         ></iframe>

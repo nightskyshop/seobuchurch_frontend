@@ -65,7 +65,10 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link
+              href="/church-info/worship-info"
+              className={styles.section__link}
+            >
               <Image
                 src="/btns/3.png"
                 width={100}

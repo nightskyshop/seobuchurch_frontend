@@ -29,6 +29,7 @@
 .column__content {
   font-family: "Light";
   white-space: pre-line;
+  line-height: 26px;
 }
 
 .column__content :global(.ql-align-center) {

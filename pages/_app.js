@@ -11,11 +11,6 @@ export default function App({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Head>
-        <script
-          type="text/javascript"
-          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=60d8ab9208d84b176f038e5844af2e74"
-        ></script>
-
         <link
           rel="stylesheet"
           href="https://unpkg.com/react-quill@1.3.3/dist/quill.snow.css"
@@ -23,6 +18,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=60d8ab9208d84b176f038e5844af2e74"
+      ></script>
     </QueryClientProvider>
   );
 }

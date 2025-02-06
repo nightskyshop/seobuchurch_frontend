@@ -1,0 +1,31 @@
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 3em auto 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.signup__form input {
+  font-size: var(--fs-input);
+  border: 1px solid var(--clr-dark);
+  padding: 0.5em;
+}
+
+.signup__form button {
+  margin: 0 auto;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  width: 100%;
+  max-width: 150px;
+  padding: 0.5em;
+  font-size: var(--fs-input);
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--clr-red);
+}
