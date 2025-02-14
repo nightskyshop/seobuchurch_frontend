@@ -68,7 +68,8 @@ li {
 }
 
 p,
-h1 {
+h1,
+h2 {
   white-space: pre-wrap;
   word-break: keep-all;
   line-height: 40px;

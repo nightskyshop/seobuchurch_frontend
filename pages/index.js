@@ -21,11 +21,10 @@ export default function Home() {
 
         <p className={styles.vision__content}>
           <span>서부교회</span>는 <br />
-          <span>하나님을 사랑</span>하여 영과 진리로 예배하며, <br />
-          <span>사람을 사랑</span>하여 영혼 구원하여 제자를 삼고, <br />
-          성령의 풍성한 교제를 누리며, 하나님의 말씀을 가르쳐 지키게 하며,{" "}
-          <br />
-          하나님께 받은 사람으로 이웃을 섬기는 한 가족 공동체입니다.
+          <span>하나님을 사랑</span>하여 영과 진리로 예배하며,{" "}
+          <span>사람을 사랑</span>하여 영혼 구원하여 제자를 삼고, 성령의 풍성한{" "}
+          교제를 누리며, 하나님의 말씀을 가르쳐 지키게 하며, 하나님께 받은{" "}
+          사람으로 이웃을 섬기는 한 가족 공동체입니다.
         </p>
 
         <Link href="/church-info/church-vision" className={styles.vision__more}>
@@ -52,7 +51,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link href="/not-ready" className={styles.section__link}>
               <Image
                 src="/btns/2.png"
                 width={100}
@@ -81,7 +80,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link href="/not-ready" className={styles.section__link}>
               <Image src="/btns/4.png" width={100} height={100} alt="공동체" />
               <h3>공동체</h3>
               <span className={styles.link_text}>바로가기</span>
@@ -89,7 +88,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link href="/not-ready" className={styles.section__link}>
               <Image src="/btns/5.png" width={100} height={100} alt="찬양" />
               <h3>찬양</h3>
               <span className={styles.link_text}>바로가기</span>
@@ -97,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link href="/not-ready" className={styles.section__link}>
               <Image
                 src="/btns/6.png"
                 width={100}
@@ -110,7 +109,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/" className={styles.section__link}>
+            <Link href="/not-ready" className={styles.section__link}>
               <Image
                 src="/btns/7.png"
                 width={100}

@@ -52,7 +52,7 @@ export default function SundaySermon({
         ></iframe>
       ) : null}
 
-      <div className={default_styles.default__bar}>
+      {/* <div className={default_styles.default__bar}>
         <Link href="/sermon-column/sermon/new?worshipTime=주일예배">
           글쓰기
         </Link>
@@ -61,7 +61,7 @@ export default function SundaySermon({
           <input type="text" />
           <button>검색</button>
         </form>
-      </div>
+      </div> */}
 
       <SermonList sermonList={default_sermons} />
     </div>

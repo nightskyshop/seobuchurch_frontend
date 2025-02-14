@@ -53,7 +53,8 @@
   font-family: "BookLight";
   font-size: var(--fs-h3);
   text-align: center;
-  margin-top: 2em;
+  max-width: 600px;
+  margin: 2em auto 0;
   line-height: 33px;
 }
 

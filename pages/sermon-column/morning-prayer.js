@@ -27,7 +27,7 @@ export default function MorningPrayer({ default_sermons, totalPages }) {
       <h1 className={default_styles.default__title}>새벽기도회</h1>
       <hr className={default_styles.default__hr} />
 
-      <div className={default_styles.default__bar}>
+      {/* <div className={default_styles.default__bar}>
         <Link href="/sermon-column/sermon/new?worshipTime=새벽기도회">
           글쓰기
         </Link>
@@ -36,7 +36,7 @@ export default function MorningPrayer({ default_sermons, totalPages }) {
           <input type="text" />
           <button>검색</button>
         </form>
-      </div>
+      </div> */}
 
       <SermonList sermonList={default_sermons} />
     </div>

@@ -44,6 +44,8 @@
 .greetings__textbox p {
   font-size: var(--fs-h3);
   line-height: 40px;
+  word-break: break-all;
+  text-align: justify;
 }
 
 .greetings__textbox span {
