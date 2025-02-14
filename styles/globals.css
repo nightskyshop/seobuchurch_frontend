@@ -67,6 +67,13 @@ li {
   all: unset;
 }
 
+p,
+h1 {
+  white-space: pre-wrap;
+  word-break: keep-all;
+  line-height: 40px;
+}
+
 :root {
   --clr-dark: #000000;
   --clr-dark-opacity: rgba(11, 37, 69, 0.5);
