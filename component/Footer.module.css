@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 1em;
+  margin-top: 3em;
+}
+
+.footer a {
+  color: var(--clr-light);
+}
+
+.footer__box {
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__box p,
+.footer__box li {
+  line-height: 34px;
+  font-family: "Light";
+}
+
+.footer__box span {
+  font-family: "Medium";
+}
+
+.footer__content_box {
+  display: flex;
+  gap: 1em;
+}
+
+@media screen and (max-width: 510px) {
+  .footer__content_box {
+    flex-direction: column;
+    gap: 0;
+  }
+}

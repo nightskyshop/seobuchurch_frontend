@@ -2,6 +2,7 @@
   padding: 0 var(--default-padding);
   margin: 1.5em auto;
   max-width: 850px;
+  flex: 1;
 }
 
 .default__wordpage {

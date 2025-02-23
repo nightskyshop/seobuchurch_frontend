@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Header from "@/component/Header";
+import Footer from "@/component/Footer";
 import "@/lib/axiosSetting";
 import "react-quill/dist/quill.snow.css";
 import "@/styles/globals.css";
@@ -18,6 +19,8 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+
+      <Footer />
 
       <script
         type="text/javascript"

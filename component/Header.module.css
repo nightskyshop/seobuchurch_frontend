@@ -107,4 +107,8 @@
   .header__btns_dropdown {
     top: 32px;
   }
+
+  .header__btns {
+    font-size: var(--fs-h3);
+  }
 }
