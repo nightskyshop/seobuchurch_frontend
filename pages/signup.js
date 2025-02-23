@@ -3,12 +3,13 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/Signup.module.css";
+import axios from "axios";
 
 export default function Signup() {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
-    if (localStorage.getItem("refreshToken")) {
+    if (sessionStorage.getItem("refreshToken")) {
       router.push("/");
     }
   }
@@ -70,7 +71,7 @@ export default function Signup() {
   };
 
   useEffect(() => {
-    if (signuped && emailCache !== "" && passwordCache !== "") {
+    if (signuped && usernameCache !== "" && passwordCache !== "") {
       login();
     }
   }, [signuped]);
@@ -85,12 +86,12 @@ export default function Signup() {
       <hr className={default_styles.default__hr} />
 
       <form onSubmit={handleSubmit} className={styles.signup__form}>
-        <input type="text" placeholder="ID" name="id" />
+        <input type="text" placeholder="ID" name="username" />
         <input type="password" placeholder="PASSWORD" name="password" />
         <input
           type="password"
           placeholder="PASSWORD CHECK"
-          name="passwordCheck"
+          name="password_check"
         />
         <input
           type="password"

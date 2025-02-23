@@ -10,7 +10,7 @@ export default function Login() {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
-    if (localStorage.getItem("refreshToken")) {
+    if (sessionStorage.getItem("refreshToken")) {
       router.push("/");
     }
   }
