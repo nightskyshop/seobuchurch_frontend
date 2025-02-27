@@ -27,16 +27,21 @@ export default function SpecialSermon({ default_sermons, totalPages }) {
       <h1 className={default_styles.default__title}>특별집회</h1>
       <hr className={default_styles.default__hr} />
 
-      {/* <div className={default_styles.default__bar}>
-        <Link href="/sermon-column/sermon/new?worshipTime=특별집회">
-          글쓰기
-        </Link>
+      <div className={default_styles.default__bar}>
+        {typeof window !== "undefined" ? (
+          sessionStorage.getItem("refreshToken") != null ? (
+            <Link href="/sermon-column/sermon/new?worshipTime=특별집회">
+              글쓰기
+            </Link>
+          ) : null
+        ) : null}
 
+        {/*
         <form className={default_styles.default__search}>
           <input type="text" />
           <button>검색</button>
-        </form>
-      </div> */}
+        </form>*/}
+      </div>
 
       <SermonList sermonList={default_sermons} />
     </div>

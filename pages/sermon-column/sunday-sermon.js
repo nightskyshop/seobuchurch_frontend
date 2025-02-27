@@ -52,16 +52,21 @@ export default function SundaySermon({
         ></iframe>
       ) : null}
 
-      {/* <div className={default_styles.default__bar}>
-        <Link href="/sermon-column/sermon/new?worshipTime=주일예배">
-          글쓰기
-        </Link>
+      <div className={default_styles.default__bar}>
+        {typeof window !== "undefined" ? (
+          sessionStorage.getItem("refreshToken") != null ? (
+            <Link href="/sermon-column/sermon/new?worshipTime=주일예배">
+              글쓰기
+            </Link>
+          ) : null
+        ) : null}
 
+        {/*
         <form className={default_styles.default__search}>
           <input type="text" />
           <button>검색</button>
-        </form>
-      </div> */}
+        </form>*/}
+      </div>
 
       <SermonList sermonList={default_sermons} />
     </div>

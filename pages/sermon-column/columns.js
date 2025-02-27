@@ -27,14 +27,18 @@ export default function Column({ default_columns, totalPages }) {
       <h1 className={default_styles.default__title}>칼럼</h1>
       <hr className={default_styles.default__hr} />
 
-      {/* <div className={default_styles.default__bar}>
-        <Link href="/sermon-column/column/new">글쓰기</Link>
-
+      <div className={default_styles.default__bar}>
+        {typeof window !== "undefined" ? (
+          sessionStorage.getItem("refreshToken") != null ? (
+            <Link href="/sermon-column/column/new">글쓰기</Link>
+          ) : null
+        ) : null}
+        {/*
         <form className={default_styles.default__search}>
           <input type="text" />
           <button>검색</button>
-        </form>
-      </div> */}
+        </form>*/}
+      </div>
 
       <ColumnList columnList={default_columns} />
     </div>
