@@ -125,7 +125,7 @@ export default function EditColumn({ id, column }) {
   return (
     <div className={default_styles.default__main}>
       <Head>
-        <title>칼럼 업로드 - 서부교회</title>
+        <title>칼럼 수정 - 서부교회</title>
       </Head>
 
       <form onSubmit={handleSubmit} className={styles.create__form}>

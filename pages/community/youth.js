@@ -1,9 +1,14 @@
 import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/Community.module.css";
+import Head from "next/head";
 
 export default function Youth() {
   return (
     <div className={default_styles.default__main}>
+      <Head>
+        <title>중•고등부 - 서부교회</title>
+      </Head>
+
       <h1 className={default_styles.default__title}>중•고등부</h1>
       <hr className={default_styles.default__hr} />
 

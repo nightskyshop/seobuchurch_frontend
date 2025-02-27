@@ -90,7 +90,7 @@ export default function EditSermon({ id, sermon }) {
   return (
     <div className={default_styles.default__main}>
       <Head>
-        <title>설교 업로드 - 서부교회</title>
+        <title>설교 수정 - 서부교회</title>
       </Head>
 
       <form onSubmit={handleSubmit} className={styles.create__form}>

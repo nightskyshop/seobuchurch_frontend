@@ -72,7 +72,7 @@ export default function EditChurchNews({ id, churchNews }) {
   return (
     <div className={default_styles.default__main}>
       <Head>
-        <title>교회소식 업로드 - 서부교회</title>
+        <title>교회소식 수정 - 서부교회</title>
       </Head>
 
       <form onSubmit={handleSubmit} className={styles.create__form}>
