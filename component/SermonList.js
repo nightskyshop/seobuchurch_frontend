@@ -3,7 +3,9 @@ import styles from "./SermonList.module.css";
 
 export default function SermonList({ sermonList }) {
   if (sermonList.length == 0) {
-    return <div>아직 업로드된 게시물이 없습니다 :(</div>;
+    return (
+      <div className={styles.no_sermon}>아직 업로드된 게시물이 없습니다 :(</div>
+    );
   }
 
   return (
@@ -37,8 +39,7 @@ export default function SermonList({ sermonList }) {
             </td>
             <td>
               <Link href={`/sermon-column/sermon/${sermon.id}`}>
-                {sermon.createdAt[0]}-{sermon.createdAt[1]}-
-                {sermon.createdAt[2]}
+                {sermon.createdAt}
               </Link>
             </td>
           </tr>

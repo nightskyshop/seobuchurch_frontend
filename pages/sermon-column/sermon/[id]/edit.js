@@ -6,7 +6,29 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Head from "next/head";
 
-export default function CreateSermon() {
+export async function getServerSideProps(context) {
+  const id = context.params["id"];
+  console.log(id);
+
+  let sermon;
+  try {
+    const res = await axios.get(`/sermon/${id}`);
+    sermon = res.data;
+  } catch {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      id,
+      sermon,
+    },
+  };
+}
+
+export default function EditSermon({ id, sermon }) {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
@@ -44,7 +66,7 @@ export default function CreateSermon() {
     } else {
       setRequesting(true);
       await axios
-        .post("/sermon", {
+        .patch(`/sermon/${id}`, {
           title,
           verse,
           createdAt,
@@ -53,8 +75,8 @@ export default function CreateSermon() {
           url,
         })
         .then((res) => {
-          res.status == 201
-            ? router.push("/sermon-column/sunday-sermon")
+          res.status == 200
+            ? router.push(`/sermon-column/sermon/${id}`)
             : window.alert("문제가 생겼습니다. 잠시후 시도해주세요.");
         })
         .catch((err) => {
@@ -72,18 +94,38 @@ export default function CreateSermon() {
       </Head>
 
       <form onSubmit={handleSubmit} className={styles.create__form}>
-        <input name="title" type="text" placeholder="제목" />
+        <input
+          name="title"
+          type="text"
+          placeholder="제목"
+          defaultValue={sermon.title}
+        />
 
         <div className={styles.form__box}>
-          <input name="verse" type="text" placeholder="본문" />
+          <input
+            name="verse"
+            type="text"
+            placeholder="본문"
+            defaultValue={sermon.verse}
+          />
 
-          <input name="createdAt" type="text" placeholder="작성일" />
+          <input
+            name="createdAt"
+            type="text"
+            placeholder="작성일"
+            defaultValue={sermon.createdAt}
+          />
         </div>
 
         <div className={styles.form__box}>
-          <input name="pastor" type="text" placeholder="설교자" />
+          <input
+            name="pastor"
+            type="text"
+            placeholder="설교자"
+            defaultValue={sermon.pastor}
+          />
 
-          <select name="worshipTime" defaultValue={defaultWorshipTime}>
+          <select name="worshipTime" defaultValue={sermon.worshipTime}>
             <option value="">---</option>
             <option value="주일예배">주일예배</option>
             <option value="주일예배">수요예배</option>
@@ -93,7 +135,12 @@ export default function CreateSermon() {
           </select>
         </div>
 
-        <input name="url" type="text" placeholder="유튜브 링크" />
+        <input
+          name="url"
+          type="text"
+          placeholder="유튜브 링크"
+          defaultValue={sermon.url}
+        />
 
         <button disabled={requesting} className={styles.form__upload}>
           업로드

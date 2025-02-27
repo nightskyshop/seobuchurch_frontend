@@ -3,7 +3,9 @@ import styles from "./ColumnList.module.css";
 
 export default function columnList({ columnList }) {
   if (columnList.length == 0) {
-    return <div>아직 업로드된 게시물이 없습니다 :(</div>;
+    return (
+      <div className={styles.no_column}>아직 업로드된 게시물이 없습니다 :(</div>
+    );
   }
 
   return (
@@ -31,8 +33,7 @@ export default function columnList({ columnList }) {
             </td>
             <td>
               <Link href={`/sermon-column/column/${column.id}`}>
-                {column.createdAt[0]}-{column.createdAt[1]}-
-                {column.createdAt[2]}
+                {column.createdAt}
               </Link>
             </td>
           </tr>

@@ -1,8 +1,12 @@
+.no_column {
+  margin-top: 2em;
+}
+
 .column_table {
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0.5em;
-  margin: 0 auto;
+  margin: 2em auto 0;
   width: 100%;
   overflow-x: scroll;
 }

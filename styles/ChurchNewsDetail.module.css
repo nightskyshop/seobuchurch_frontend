@@ -1,4 +1,4 @@
-.sermon {
+.churchNews {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
@@ -6,30 +6,24 @@
   padding: 3em 2.5em;
 }
 
-.sermon__textbox {
-  display: flex;
-  justify-content: space-between;
+.churchNews__author {
+  margin-left: auto;
   font-size: var(--fs-h3);
 }
 
-.sermon__createdAt {
-  margin-left: auto;
-  font-family: "Light";
-}
-
-.sermon__youtube {
+.churchNews__google_drive {
   display: block;
   margin: 0 auto 1em;
   max-width: 560px;
 }
 
-.sermon__btns {
+.churchNews__btns {
   display: flex;
   justify-content: center;
   gap: 2em;
 }
 
-.sermon__goToList {
+.churchNews__goToList {
   display: block;
   height: 23px;
   width: 48px;

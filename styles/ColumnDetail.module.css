@@ -49,6 +49,12 @@
   text-align: left;
 }
 
+.column__btns {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
 .column__goToList {
   display: block;
   height: 23px;
@@ -58,5 +64,4 @@
   padding: 0.5em 0.75em;
   font-size: var(--fs-h3);
   text-align: center;
-  margin: 0 auto;
 }

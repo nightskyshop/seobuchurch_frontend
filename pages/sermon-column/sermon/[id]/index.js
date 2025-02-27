@@ -20,12 +20,13 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
+      id,
       sermon,
     },
   };
 }
 
-export default function SermonDetail({ sermon }) {
+export default function SermonDetail({ id, sermon }) {
   return (
     <div className={default_styles.default__main}>
       <Head>
@@ -38,9 +39,7 @@ export default function SermonDetail({ sermon }) {
           <p>{sermon.verse}</p>
           <p>{sermon.pastor}</p>
         </div>
-        <p className={styles.sermon__createdAt}>
-          {sermon.createdAt[0]}-{sermon.createdAt[1]}-{sermon.createdAt[2]}
-        </p>
+        <p className={styles.sermon__createdAt}>{sermon.createdAt}</p>
         <iframe
           className={styles.sermon__youtube}
           width="100%"
@@ -48,7 +47,7 @@ export default function SermonDetail({ sermon }) {
           src={sermon.url}
         ></iframe>
 
-        <div>
+        <div className={styles.sermon__btns}>
           {sermon.worshipTime == "주일예배" ? (
             <Link
               className={styles.sermon__goToList}
@@ -83,6 +82,17 @@ export default function SermonDetail({ sermon }) {
             >
               목록
             </Link>
+          ) : null}
+
+          {typeof window !== "undefined" ? (
+            sessionStorage.getItem("refreshToken") != null ? (
+              <Link
+                className={styles.sermon__goToList}
+                href={`/sermon-column/sermon/${id}/edit`}
+              >
+                수정
+              </Link>
+            ) : null
           ) : null}
         </div>
       </div>

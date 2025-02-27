@@ -1,8 +1,8 @@
-.no_sermon {
+.no_churchNews {
   margin-top: 2em;
 }
 
-.sermon_table {
+.churchNews_table {
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0.5em;
@@ -11,32 +11,32 @@
   overflow-x: scroll;
 }
 
-.sermon_thead,
-.sermon_tbody,
-.sermon_tbody {
+.churchNews_thead,
+.churchNews_tbody,
+.churchNews_tbody {
   min-width: 400px;
   width: 100%;
 }
-.sermon_thead th,
-.sermon_tbody th,
-.sermon_tbody td {
+.churchNews_thead th,
+.churchNews_tbody th,
+.churchNews_tbody td {
   font-size: var(--fs-h4);
   text-align: left;
   padding: 0.5em;
 }
 
-.sermon_thead {
+.churchNews_thead {
   background-color: var(--clr-light-gray);
 }
 
-.sermon_thead a {
+.churchNews_thead a {
   display: block;
 }
 
-.sermon_thead th {
+.churchNews_thead th {
   font-family: "Bold";
 }
 
-.sermon_tbody {
+.churchNews_tbody {
   gap: 1.25em;
 }

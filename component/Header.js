@@ -209,20 +209,48 @@ export default function Header() {
               </div>
             </li>
             <li>
-              <Link href="/not-ready" onClick={handleClick}>
-                *공동체
+              <Link
+                href="/community"
+                className={
+                  router.asPath.includes("/community") ? styles.selected : null
+                }
+                onClick={handleClick}
+              >
+                공동체
               </Link>
 
               <div className={styles.header__btns_dropdown}>
                 <p>다음세대</p>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *유•초등부
+                <Link
+                  href="/community/elementary"
+                  className={
+                    router.asPath.includes("/elementary")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  유•초등부
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *청소년부
+                <Link
+                  href="/community/youth"
+                  className={
+                    router.asPath.includes("/youth") ? styles.selected : null
+                  }
+                  onClick={handleClick}
+                >
+                  중•고등부
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *청년부
+                <Link
+                  href="/community/young-adult"
+                  className={
+                    router.asPath.includes("/young-adult")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  청년부
                 </Link>
 
                 <p className={styles.marginTop}>엘더세대</p>
@@ -264,16 +292,30 @@ export default function Header() {
               </div>
             </li>
             <li>
-              <Link href="/not-ready" onClick={handleClick}>
-                *코이노니아
+              <Link
+                href="/koinonia/church-news"
+                className={
+                  router.asPath.includes("/koinonia") ? styles.selected : null
+                }
+                onClick={handleClick}
+              >
+                코이노니아
               </Link>
 
               <div className={styles.header__btns_dropdown}>
                 <Link href="/not-ready" onClick={handleClick}>
                   *주요일정
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *교회소식
+                <Link
+                  href="/koinonia/church-news"
+                  className={
+                    router.asPath.includes("/church-news")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  교회소식
                 </Link>
                 <Link href="/not-ready" onClick={handleClick}>
                   *나눔터

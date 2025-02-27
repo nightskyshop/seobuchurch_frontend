@@ -51,7 +51,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/not-ready" className={styles.section__link}>
+            <Link href="/koinonia/churchNews" className={styles.section__link}>
               <Image
                 src="/btns/2.png"
                 width={100}
@@ -80,7 +80,7 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/not-ready" className={styles.section__link}>
+            <Link href="/community" className={styles.section__link}>
               <Image src="/btns/4.png" width={100} height={100} alt="공동체" />
               <h3>공동체</h3>
               <span className={styles.link_text}>바로가기</span>

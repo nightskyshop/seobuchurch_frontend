@@ -27,9 +27,30 @@ if (typeof window !== "undefined") {
   });
 }
 
-export default function CreateColumn() {
+export async function getServerSideProps(context) {
+  const id = context.params["id"];
+  console.log(id);
+
+  let column;
+  try {
+    const res = await axios.get(`/column/${id}`);
+    column = res.data;
+  } catch {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      id,
+      column,
+    },
+  };
+}
+
+export default function EditColumn({ id, column }) {
   const router = useRouter();
-  const params = useSearchParams();
 
   if (typeof window !== "undefined") {
     if (sessionStorage.getItem("refreshToken") == null) {
@@ -39,7 +60,7 @@ export default function CreateColumn() {
 
   const [requesting, setRequesting] = useState(false);
   const [modules, setModules] = useState();
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState(column.content);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,20 +70,25 @@ export default function CreateColumn() {
     const author = form.elements.namedItem("author").value;
     const createdAt = form.elements.namedItem("createdAt").value;
 
-    if (title.trim() == "" || author.trim() == "" || content.trim() == "") {
+    if (
+      title.trim() == "" ||
+      author.trim() == "" ||
+      content.trim() == "" ||
+      createdAt.trim() == ""
+    ) {
       window.alert("모든 항목을 입력해주세요.");
     } else {
       setRequesting(true);
       await axios
-        .post("/column", {
+        .patch(`/column/${id}`, {
           title,
           author,
           content,
           createdAt,
         })
         .then((res) => {
-          res.status == 201
-            ? router.push("/sermon-column/columns")
+          res.status == 200
+            ? router.push(`/sermon-column/column/${id}`)
             : window.alert("문제가 생겼습니다. 잠시후 시도해주세요.");
         })
         .catch((err) => {
@@ -103,9 +129,24 @@ export default function CreateColumn() {
       </Head>
 
       <form onSubmit={handleSubmit} className={styles.create__form}>
-        <input name="title" type="text" placeholder="제목" />
-        <input name="author" type="text" placeholder="작성자" />
-        <input name="createdAt" type="text" placeholder="작성일" />
+        <input
+          name="title"
+          type="text"
+          placeholder="제목"
+          defaultValue={column.title}
+        />
+        <input
+          name="author"
+          type="text"
+          placeholder="작성자"
+          defaultValue={column.author}
+        />
+        <input
+          name="createdAt"
+          type="text"
+          placeholder="작성일"
+          defaultValue={column.createdAt}
+        />
 
         {typeof window === "undefined" || modules == undefined ? (
           <div>Loading editor...</div>
@@ -115,6 +156,7 @@ export default function CreateColumn() {
             modules={modules}
             style={{ height: "350px" }}
             onChange={handleChange}
+            defaultValue={column.content}
           />
         )}
 

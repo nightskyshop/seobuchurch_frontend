@@ -21,12 +21,13 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
+      id,
       column,
     },
   };
 }
 
-export default function ColumnDetail({ column }) {
+export default function ColumnDetail({ id, column }) {
   return (
     <div className={default_styles.default__main}>
       <Head>
@@ -38,9 +39,7 @@ export default function ColumnDetail({ column }) {
         <div className={styles.column__textbox}>
           <p className={styles.column__author}>{column.author}</p>
 
-          <p className={styles.column__createdAt}>
-            {column.createdAt[0]}-{column.createdAt[1]}-{column.createdAt[2]}
-          </p>
+          <p className={styles.column__createdAt}>{column.createdAt}</p>
         </div>
 
         <hr className={styles.column__hr} />
@@ -50,13 +49,24 @@ export default function ColumnDetail({ column }) {
           dangerouslySetInnerHTML={{ __html: column.content }}
         ></div>
 
-        <div>
+        <div className={styles.column__btns}>
           <Link
             className={styles.column__goToList}
             href="/sermon-column/columns"
           >
             목록
           </Link>
+
+          {typeof window !== "undefined" ? (
+            sessionStorage.getItem("refreshToken") != null ? (
+              <Link
+                className={styles.column__goToList}
+                href={`/sermon-column/column/${id}/edit`}
+              >
+                수정
+              </Link>
+            ) : null
+          ) : null}
         </div>
       </div>
     </div>
