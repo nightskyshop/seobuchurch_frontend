@@ -30,6 +30,8 @@
   font-family: "Light";
   white-space: pre-line;
   line-height: 26px;
+  word-break: break-all;
+  text-align: justify;
 }
 
 .column__content :global(.ql-align-center) {
