@@ -1,0 +1,29 @@
+.churchHistory__container {
+  margin-top: 2em;
+}
+
+.churchHistory__heading {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: min-content;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  border-radius: 10px;
+  font-size: var(--fs-h2);
+}
+
+.churchHistory__box {
+  display: flex;
+  gap: 0.75em;
+  font-size: var(--fs-h4);
+}
+
+.churchHistory__box span {
+  font-family: "Light";
+}
+
+.churchHistory__years {
+  font-family: "Bold";
+  max-width: 165px;
+  width: 100%;
+}
