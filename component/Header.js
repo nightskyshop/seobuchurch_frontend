@@ -89,8 +89,16 @@ export default function Header() {
                 >
                   교회 비전
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *교회연혁
+                <Link
+                  href="/church-info/church-history"
+                  className={
+                    router.asPath.includes("church-history")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  교회연혁
                 </Link>
                 <Link
                   href="/church-info/greetings"
