@@ -119,4 +119,11 @@ h2 {
     --fs-h5: 0.8rem;
     --fs-input: 1rem;
   }
+
+  p,
+  h1,
+  h2 {
+    word-spacing: 2px;
+    line-height: 38px;
+  }
 }

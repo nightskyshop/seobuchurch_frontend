@@ -34,6 +34,11 @@
   text-align: justify;
 }
 
+.column__content p,
+.column__content h1 {
+  word-break: break-all;
+}
+
 .column__content :global(.ql-align-center) {
   text-align: center;
 }

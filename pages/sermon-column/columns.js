@@ -3,6 +3,7 @@ import default_styles from "@/styles/default.module.css";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export async function getServerSideProps() {
   const {
@@ -18,6 +19,24 @@ export async function getServerSideProps() {
 }
 
 export default function Column({ default_columns, totalPages }) {
+  const [columns, setColumns] = useState(default_columns);
+  const [pageNo, setPageNo] = useState(0);
+
+  const getColumns = async () => {
+    const {
+      data: { content },
+    } = await axios.get(`/column?pageNo=${pageNo}`);
+    setColumns(content);
+  };
+
+  const handlePageChange = ({ selected }) => {
+    setPageNo(selected);
+  };
+
+  useEffect(() => {
+    getColumns();
+  }, [pageNo]);
+
   return (
     <div className={default_styles.default__main}>
       <Head>
@@ -40,7 +59,12 @@ export default function Column({ default_columns, totalPages }) {
         </form>*/}
       </div>
 
-      <ColumnList columnList={default_columns} />
+      <ColumnList
+        columnList={default_columns}
+        totalPages={totalPages}
+        handlePageChange={handlePageChange}
+        pageNo={pageNo}
+      />
     </div>
   );
 }

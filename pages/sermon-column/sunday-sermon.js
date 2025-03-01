@@ -4,6 +4,7 @@ import styles from "@/styles/SundaySermon.module.css";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export async function getServerSideProps() {
   const {
@@ -32,6 +33,24 @@ export default function SundaySermon({
   totalPages,
   currentSermon,
 }) {
+  const [sermons, setSermons] = useState(default_sermons);
+  const [pageNo, setPageNo] = useState(0);
+
+  const getSermons = async () => {
+    const {
+      data: { content },
+    } = await axios.get(`/sermon?pageNo=${pageNo}&worshipTime=주일예배`);
+    setSermons(content);
+  };
+
+  const handlePageChange = ({ selected }) => {
+    setPageNo(selected);
+  };
+
+  useEffect(() => {
+    getSermons();
+  }, [pageNo]);
+
   return (
     <div className={default_styles.default__main}>
       <Head>
@@ -68,7 +87,12 @@ export default function SundaySermon({
         </form>*/}
       </div>
 
-      <SermonList sermonList={default_sermons} />
+      <SermonList
+        sermonList={sermons}
+        totalPages={totalPages}
+        handlePageChange={handlePageChange}
+        pageNo={pageNo}
+      />
     </div>
   );
 }
