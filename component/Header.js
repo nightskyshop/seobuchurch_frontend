@@ -124,6 +124,17 @@ export default function Header() {
                   예배안내
                 </Link>
                 <Link
+                  href="/church-info/church-news"
+                  className={
+                    router.asPath.includes("/church-news")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  교회소식
+                </Link>
+                <Link
                   href="/church-info/how-to-come"
                   className={
                     router.asPath.includes("how-to-come")
@@ -146,7 +157,7 @@ export default function Header() {
                 }
                 onClick={handleClick}
               >
-                설교 및 칼럼
+                말씀 및 찬양
               </Link>
 
               <div className={styles.header__btns_dropdown}>
@@ -214,6 +225,12 @@ export default function Header() {
                 >
                   칼럼
                 </Link>
+                <Link href="/not-ready" onClick={handleClick}>
+                  *찬양대
+                </Link>
+                <Link href="/not-ready" onClick={handleClick}>
+                  *경배와 찬양
+                </Link>
               </div>
             </li>
             <li>
@@ -261,12 +278,12 @@ export default function Header() {
                   청년부
                 </Link>
 
-                <p className={styles.marginTop}>엘더세대</p>
+                <p className={styles.marginTop}>사랑방</p>
                 <Link href="/not-ready" onClick={handleClick}>
-                  *사랑방
+                  *사랑방 이야기
                 </Link>
                 <Link href="/not-ready" onClick={handleClick}>
-                  *엘더모임
+                  *사랑방 자료
                 </Link>
               </div>
             </li>
@@ -300,30 +317,14 @@ export default function Header() {
               </div>
             </li>
             <li>
-              <Link
-                href="/koinonia/church-news"
-                className={
-                  router.asPath.includes("/koinonia") ? styles.selected : null
-                }
-                onClick={handleClick}
-              >
-                코이노니아
-              </Link>
+              <Link href="/not-ready">*코이노니아</Link>
 
               <div className={styles.header__btns_dropdown}>
                 <Link href="/not-ready" onClick={handleClick}>
                   *주요일정
                 </Link>
-                <Link
-                  href="/koinonia/church-news"
-                  className={
-                    router.asPath.includes("/church-news")
-                      ? styles.selected
-                      : null
-                  }
-                  onClick={handleClick}
-                >
-                  교회소식
+                <Link href="/not-ready" onClick={handleClick}>
+                  *문화교실
                 </Link>
                 <Link href="/not-ready" onClick={handleClick}>
                   *나눔터

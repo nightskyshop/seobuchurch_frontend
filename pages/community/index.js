@@ -46,8 +46,8 @@ export default function Community() {
         </div>
       </div>
 
-      <h1 className={default_styles.default__title}>엘더 세대</h1>
-      <hr className={default_styles.default__hr} />
+      {/* <h1 className={default_styles.default__title}>엘더 세대</h1>
+      <hr className={default_styles.default__hr} /> */}
     </div>
   );
 }
