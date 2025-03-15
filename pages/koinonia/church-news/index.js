@@ -3,6 +3,7 @@ import default_styles from "@/styles/default.module.css";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export async function getServerSideProps() {
   const {
@@ -18,7 +19,24 @@ export async function getServerSideProps() {
 }
 
 export default function ChurchNews({ default_churchNews, totalPages }) {
-  console.log(default_churchNews);
+  const [churchNews, setChurchNews] = useState(default_churchNews);
+  const [pageNo, setPageNo] = useState(0);
+
+  const getChurchNews = async () => {
+    const {
+      data: { content },
+    } = await axios.get(`/churchNews?pageNo=${pageNo}`);
+    setChurchNews(content);
+  };
+
+  const handlePageChange = ({ selected }) => {
+    setPageNo(selected);
+  };
+
+  useEffect(() => {
+    getChurchNews();
+  }, [pageNo]);
+
   return (
     <div className={default_styles.default__main}>
       <Head>
@@ -42,7 +60,12 @@ export default function ChurchNews({ default_churchNews, totalPages }) {
         </form>*/}
       </div>
 
-      <ChurchNewsList churchNewsList={default_churchNews} />
+      <ChurchNewsList
+        churchNewsList={churchNews}
+        totalPages={totalPages}
+        handlePageChange={handlePageChange}
+        pageNo={pageNo}
+      />
     </div>
   );
 }

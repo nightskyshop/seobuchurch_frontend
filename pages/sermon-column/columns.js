@@ -60,7 +60,7 @@ export default function Column({ default_columns, totalPages }) {
       </div>
 
       <ColumnList
-        columnList={default_columns}
+        columnList={columns}
         totalPages={totalPages}
         handlePageChange={handlePageChange}
         pageNo={pageNo}
