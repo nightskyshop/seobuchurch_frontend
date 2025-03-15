@@ -49,10 +49,13 @@ export default function WorshipInfo() {
           <tr>
             <td>
               <div>
-                <span>구</span>
-                <span>역</span>
-                <span>모</span>
-                <span>임</span>
+                <span>사</span>
+                <span>랑</span>
+                <span>방</span>
+                <span> (마</span>
+                <span>지</span>
+                <span>막</span>
+                <span>주)</span>
               </div>
             </td>
             <td>
@@ -60,13 +63,13 @@ export default function WorshipInfo() {
                 <span>주</span>
                 <span>일</span>
                 <span>1</span>
-                <span>4</span>
+                <span>3</span>
                 <span>:</span>
                 <span>0</span>
                 <span>0</span>
               </div>
             </td>
-            <td className={styles.red}>미정</td>
+            <td>각실</td>
           </tr>
 
           <tr>
