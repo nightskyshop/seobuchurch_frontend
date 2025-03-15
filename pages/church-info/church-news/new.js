@@ -36,7 +36,7 @@ export default function CreateChurchNews() {
         })
         .then((res) => {
           res.status == 201
-            ? router.push("/koinonia/church-news")
+            ? router.push("/church-info/church-news")
             : window.alert("문제가 생겼습니다. 잠시후 시도해주세요.");
         })
         .catch((err) => {

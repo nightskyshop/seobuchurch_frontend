@@ -45,6 +45,7 @@ export default function SermonDetail({ id, sermon }) {
           width="100%"
           height="315"
           src={sermon.url}
+          allowfullscreen
         ></iframe>
 
         <div className={styles.sermon__btns}>

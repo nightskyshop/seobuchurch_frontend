@@ -46,7 +46,7 @@ export default function ChurchNewsDetail({ id, churchNews }) {
         <div className={styles.churchNews__btns}>
           <Link
             className={styles.churchNews__goToList}
-            href="/koinonia/church-news"
+            href="/church-info/church-news"
           >
             목록
           </Link>
@@ -55,7 +55,7 @@ export default function ChurchNewsDetail({ id, churchNews }) {
             sessionStorage.getItem("refreshToken") != null ? (
               <Link
                 className={styles.churchNews__goToList}
-                href={`/koinonia/church-news/${id}/edit`}
+                href={`/church-info/church-news/${id}/edit`}
               >
                 수정
               </Link>

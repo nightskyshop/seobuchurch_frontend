@@ -49,7 +49,7 @@ export default function ChurchNews({ default_churchNews, totalPages }) {
       <div className={default_styles.default__bar}>
         {typeof window !== "undefined" ? (
           sessionStorage.getItem("refreshToken") != null ? (
-            <Link href="/koinonia/church-news/new">글쓰기</Link>
+            <Link href="/church-info/church-news/new">글쓰기</Link>
           ) : null
         ) : null}
 

@@ -68,6 +68,7 @@ export default function SundaySermon({
           width="100%"
           height="315"
           src={currentSermon.url}
+          allowfullscreen
         ></iframe>
       ) : null}
 

@@ -30,12 +30,12 @@ export default function ChurchNewsList({
           {churchNewsList.map((churchNews) => (
             <tr key={churchNews.id}>
               <td>
-                <Link href={`/koinonia/church-news/${churchNews.id}`}>
+                <Link href={`/church-info/church-news/${churchNews.id}`}>
                   {churchNews.title}
                 </Link>
               </td>
               <td>
-                <Link href={`/koinonia/church-news/${churchNews.id}`}>
+                <Link href={`/church-info/church-news/${churchNews.id}`}>
                   {churchNews.author}
                 </Link>
               </td>

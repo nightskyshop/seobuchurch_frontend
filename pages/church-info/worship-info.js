@@ -52,10 +52,9 @@ export default function WorshipInfo() {
                 <span>사</span>
                 <span>랑</span>
                 <span>방</span>
-                <span> (마</span>
+                <span>(마</span>
                 <span>지</span>
-                <span>막</span>
-                <span>주)</span>
+                <span>막)</span>
               </div>
             </td>
             <td>

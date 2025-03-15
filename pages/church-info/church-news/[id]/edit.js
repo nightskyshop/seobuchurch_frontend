@@ -58,7 +58,7 @@ export default function EditChurchNews({ id, churchNews }) {
         })
         .then((res) => {
           res.status == 200
-            ? router.push(`/koinonia/church-news/${id}`)
+            ? router.push(`/church-info/church-news/${id}`)
             : window.alert("문제가 생겼습니다. 잠시후 시도해주세요.");
         })
         .catch((err) => {
