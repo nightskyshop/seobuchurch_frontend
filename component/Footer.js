@@ -13,18 +13,12 @@ export default function Footer() {
         <li>
           <p>
             <span>주소</span> : 서울 은평구 응암로 345-1 (우.03458) Seoboo
-            Presbyterian Church. 354-1 Eungamro Eunpyung-gi, Seoul, Korea
+            Presbyterian Church. 345-1 Eungamro Eunpyung-gi, Seoul, Korea
           </p>
         </li>
         <li className={styles.footer__content_box}>
           <p>
-            <span>Mobile</span>: 010-4227-2866
-          </p>
-          <p>
-            <span>Tel</span> : 352-6969
-          </p>
-          <p>
-            <span>Fax</span> : 358-2766
+            <span>Tel</span> : 02-352-6969
           </p>
         </li>
 

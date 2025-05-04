@@ -86,10 +86,10 @@ export default function CreateSermon() {
           <select name="worshipTime" defaultValue={defaultWorshipTime}>
             <option value="">---</option>
             <option value="주일예배">주일예배</option>
-            <option value="주일예배">수요예배</option>
-            <option value="주일예배">금요기도회</option>
-            <option value="주일예배">새벽기도회</option>
-            <option value="주일예배">특별집회</option>
+            <option value="수요예배">수요예배</option>
+            <option value="금요기도회">금요기도회</option>
+            <option value="새벽기도회">새벽기도회</option>
+            <option value="특별집회">특별집회</option>
           </select>
         </div>
 

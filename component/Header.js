@@ -109,8 +109,14 @@ export default function Header() {
                 >
                   담임목사 인사말
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *섬기는 분들
+                <Link
+                  href="/church-info/workers"
+                  className={
+                    router.asPath.includes("workers") ? styles.selected : null
+                  }
+                  onClick={handleClick}
+                >
+                  섬기는 분들
                 </Link>
                 <Link
                   href="/church-info/worship-info"

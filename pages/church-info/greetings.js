@@ -13,17 +13,6 @@ export default function Greetings() {
       <h1 className={default_styles.default__title}>담임목사 인사말</h1>
       <hr className={default_styles.default__hr} />
 
-      <Image
-        className={styles.greetings__image}
-        src="/images/담임목사님.jpeg"
-        width={300}
-        height={380}
-      />
-
-      <h3 className={styles.greetings__title}>
-        김혜수 <span>목사</span>
-      </h3>
-
       <div className={styles.greetings__borderbox}>
         <p>
           “하나님이 우리를 사랑하시는 사랑을 우리가 알고 믿었노니 하나님은

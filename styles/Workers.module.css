@@ -1,0 +1,30 @@
+.pastor__image {
+  display: block;
+  margin: 4em auto 0;
+}
+
+.pastor__title {
+  text-align: center;
+  margin-top: 0.75em;
+  font-family: "Bold";
+  font-size: var(--fs-h2);
+}
+
+.pastor__title span {
+  font-family: "Light";
+  font-size: var(--fs-h3);
+}
+
+.workers {
+  display: grid;
+  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 0px 1em;
+}
+
+.workers__box {
+  max-width: 250px;
+}

@@ -1,20 +1,3 @@
-.greetings__image {
-  display: block;
-  margin: 4em auto 0;
-}
-
-.greetings__title {
-  text-align: center;
-  margin-top: 0.75em;
-  font-family: "Bold";
-  font-size: var(--fs-h2);
-}
-
-.greetings__title span {
-  font-family: "Light";
-  font-size: var(--fs-h3);
-}
-
 .greetings__borderbox {
   margin: 2em auto 0;
   border: 1px solid var(--clr-dark);
@@ -27,6 +10,8 @@
 .greetings__borderbox p {
   font-family: "Bold";
   font-size: var(--fs-h3);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .greetings__borderbox span {

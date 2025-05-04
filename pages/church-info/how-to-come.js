@@ -71,15 +71,13 @@ export default function HowToCome() {
             <p className={styles.howToCome__bus}>버스:</p>
             <div>
               <p>
-                서부경찰서 정류소 <span>7022, 7613</span> <br />
-                서부경찰서 후문 정류소 <span>761, 772, 은평05</span> <br />
+                서부경찰서 후문 정류소 <span>761, 7722, 8774</span> <br />
               </p>
 
               <p className={styles.howToCome__textbox2}>
                 본서부병원 정류소{" "}
                 <span className={styles.howToCome__linespan}>
-                  702A서오릉, 702B용두초교, 7025, <br />
-                  7212, 7719, 7722, 7730, 8771, 8773
+                  702A, 702B, 7025, 7212, 7719, 7722, 7730, 은평05
                 </span>{" "}
               </p>
             </div>
