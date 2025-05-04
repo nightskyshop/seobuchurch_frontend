@@ -36,6 +36,19 @@
   font-size: var(--fs-h5);
 }
 
+.community__images {
+  display: grid;
+  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 2em;
+}
+
+.community__images img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
 .community__borderbox {
   display: flex;
   flex-direction: column;

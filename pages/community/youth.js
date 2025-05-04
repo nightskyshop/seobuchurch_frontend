@@ -1,6 +1,7 @@
 import default_styles from "@/styles/default.module.css";
 import styles from "@/styles/Community.module.css";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Youth() {
   return (
@@ -11,6 +12,11 @@ export default function Youth() {
 
       <h1 className={default_styles.default__title}>중•고등부</h1>
       <hr className={default_styles.default__hr} />
+
+      <div className={styles.community__images}>
+        <Image src="/images/중고1.jpeg" width={260} height={300} />
+        <Image src="/images/중고2.jpeg" width={400} height={300} />
+      </div>
 
       <div className={styles.community__borderbox}>
         <p>
