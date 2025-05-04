@@ -231,8 +231,14 @@ export default function Header() {
                 >
                   칼럼
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *찬양대
+                <Link
+                  href="/sermon-column/choir"
+                  className={
+                    router.asPath.includes("choir") ? styles.selected : null
+                  }
+                  onClick={handleClick}
+                >
+                  찬양대
                 </Link>
                 <Link href="/not-ready" onClick={handleClick}>
                   *경배와 찬양
