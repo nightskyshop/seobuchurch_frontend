@@ -9,10 +9,8 @@ export default function Community() {
       <Head>
         <title>공동체 - 서부교회</title>
       </Head>
-
       <h1 className={default_styles.default__title}>다음 세대</h1>
       <hr className={default_styles.default__hr} />
-
       <p className={styles.community__newGeneration}>
         믿음은 한 세대에서 다음 세대로 이어져 왔습니다. 예수그리스도에게서
         제자들에게로, 제자들에게서 교회들로, 교회의 신앙선배들에게서 오늘날
@@ -21,7 +19,6 @@ export default function Community() {
         다음세대를 세워가야 합니다.{" "}
         <span>서부교회는 믿음의 다음세대를 세워가는 교회</span>입니다.
       </p>
-
       <div className={styles.community__container}>
         <div className={styles.community__box}>
           <h1>
@@ -46,8 +43,22 @@ export default function Community() {
         </div>
       </div>
 
-      {/* <h1 className={default_styles.default__title}>엘더 세대</h1>
-      <hr className={default_styles.default__hr} /> */}
+      <h1 className={default_styles.default__title}>사랑방</h1>
+      <hr className={default_styles.default__hr} />
+      <p className={styles.community__hasarangRoom}>
+        사랑방 모임은 하나님의 사랑을 받은 성도들이 함께 모여서 서로 사랑을
+        나누는 작은 공동체입니다. 말씀과 기도, 성도의 교제를 통해 성령의 풍성한
+        은혜를 함께 누리는 시간입니다. 사랑방 모임은 매달 마지막 주일 오후 1시에
+        각 사랑방 모임 장소에서 진행됩니다.
+      </p>
+
+      <div className={styles.community__box_hasarang}>
+        <h1>
+          <Link href="/community/hasarang-room">사랑방</Link>
+        </h1>
+
+        <Link href="/community/hasarang-room">바로가기</Link>
+      </div>
     </div>
   );
 }

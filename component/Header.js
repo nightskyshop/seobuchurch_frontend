@@ -290,13 +290,11 @@ export default function Header() {
                   청년부
                 </Link>
 
-                <p className={styles.marginTop}>사랑방</p>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *사랑방 이야기
-                </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *사랑방 자료
-                </Link>
+                <p className={styles.marginTop}>
+                  <Link href="/community/hasarang-room" onClick={handleClick}>
+                    사랑방
+                  </Link>
+                </p>
               </div>
             </li>
             <li>

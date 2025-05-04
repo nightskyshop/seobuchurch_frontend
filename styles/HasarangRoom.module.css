@@ -1,0 +1,17 @@
+.hasarangRoom__images {
+  display: grid;
+  grid-auto-rows: 330px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.hasarangRoom__images img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hasarangRoom__caption {
+  text-align: center;
+}

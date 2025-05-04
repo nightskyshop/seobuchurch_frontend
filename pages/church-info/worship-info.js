@@ -110,7 +110,7 @@ export default function WorshipInfo() {
                 <span>0</span>
               </div>
             </td>
-            <td>B1층 유치부실</td>
+            <td>B1층 유초등부실</td>
           </tr>
 
           <tr>
