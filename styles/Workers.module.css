@@ -15,16 +15,43 @@
   font-size: var(--fs-h3);
 }
 
+.workers__box1 {
+  max-width: 250px;
+  text-align: center;
+  margin: 5em auto;
+}
+
+.workers__box1 p {
+  font-size: var(--fs-h3);
+  font-family: "Bold";
+}
+
+.workers__box1 span {
+  font-size: var(--fs-h5);
+}
+
 .workers {
   display: grid;
-  grid-auto-rows: 250px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1em;
-  max-width: 800px;
   margin: 3em auto;
   padding: 0px 1em;
+  justify-content: center;
 }
 
 .workers__box {
   max-width: 250px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.workers__box p {
+  font-size: var(--fs-h3);
+  font-family: "Bold";
+}
+
+.workers__box span {
+  font-size: var(--fs-h5);
 }

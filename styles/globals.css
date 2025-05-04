@@ -101,7 +101,7 @@ h2 {
   --fs-h5: 0.9rem;
   --fs-input: 1.1rem;
 
-  --default-padding: 5em;
+  --default-padding: 3em;
 }
 
 @media screen and (max-width: 1160px) {

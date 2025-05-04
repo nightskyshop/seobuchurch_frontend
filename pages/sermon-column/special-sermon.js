@@ -25,7 +25,7 @@ export default function SpecialSermon({ default_sermons, totalPages }) {
   const getSermons = async () => {
     const {
       data: { content },
-    } = await axios.get(`/sermon?pageNo=${pageNo}&worshipTime=금요기도회`);
+    } = await axios.get(`/sermon?pageNo=${pageNo}&worshipTime=특별집회`);
     setSermons(content);
   };
 

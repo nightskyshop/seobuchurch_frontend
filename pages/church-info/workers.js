@@ -16,38 +16,38 @@ export default function Workers() {
       <Image
         className={styles.pastor__image}
         src="/images/담임목사님.jpeg"
-        width={300}
-        height={380}
+        width={230}
+        height={300}
       />
 
       <h3 className={styles.pastor__title}>
-        김혜수 <span>목사</span>
+        <span>담임목사</span> 김혜수
       </h3>
 
-      <div className={styles.workeres}>
-        <div className={styles.workers__box}>
-          <Image src="/images/white.jpg" width={100} height={200} />
-          <p>
-            서효진 <span>전도사</span>
-          </p>
-        </div>
+      <div className={styles.workers__box1}>
+        <Image src="/images/white.jpg" width={230} height={300} />
+        <p>
+          서효진 <span>전도사</span>
+        </p>
+      </div>
 
+      <div className={styles.workers}>
         <div className={styles.workers__box}>
-          <Image src="/images/white.jpg" width={100} height={200} />
+          <Image src="/images/white.jpg" width={230} height={300} />
           <p>
             전기원 <span>원로장로</span>
           </p>
         </div>
 
         <div className={styles.workers__box}>
-          <Image src="/images/white.jpg" width={100} height={200} />
+          <Image src="/images/white.jpg" width={230} height={300} />
           <p>
             남궁현 <span>원로장로</span>
           </p>
         </div>
 
         <div className={styles.workers__box}>
-          <Image src="/images/white.jpg" width={100} height={200} />
+          <Image src="/images/white.jpg" width={230} height={300} />
           <p>
             정용균 <span>원로장로</span>
           </p>
