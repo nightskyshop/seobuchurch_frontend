@@ -27,7 +27,33 @@ export default function WorshipInfo() {
               <div>
                 <span>주</span>
                 <span>일</span>
-                <span>낮</span>
+                <span>1</span>
+                <span>부</span>
+                <span>예</span>
+                <span>배</span>
+              </div>
+            </td>
+            <td>
+              <div>
+                <span>주</span>
+                <span>일</span>
+                <span>0</span>
+                <span>9</span>
+                <span>:</span>
+                <span>3</span>
+                <span>0</span>
+              </div>
+            </td>
+            <td>2층 본당</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div>
+                <span>주</span>
+                <span>일</span>
+                <span>2</span>
+                <span>부</span>
                 <span>예</span>
                 <span>배</span>
               </div>
@@ -43,7 +69,7 @@ export default function WorshipInfo() {
                 <span>0</span>
               </div>
             </td>
-            <td>2층 예배실</td>
+            <td>2층 본당</td>
           </tr>
 
           <tr>
@@ -85,7 +111,7 @@ export default function WorshipInfo() {
                 <span>0</span>
               </div>
             </td>
-            <td>1층 사랑방</td>
+            <td>본당</td>
           </tr>
 
           <tr>
@@ -182,7 +208,7 @@ export default function WorshipInfo() {
                 <span>0</span>
               </div>
             </td>
-            <td>B1층 예배실</td>
+            <td>2층 본당</td>
           </tr>
         </tbody>
       </table>
