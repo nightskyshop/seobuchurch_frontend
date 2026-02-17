@@ -240,8 +240,16 @@ export default function Header() {
                 >
                   찬양대
                 </Link>
-                <Link href="/not-ready" onClick={handleClick}>
-                  *경배와 찬양
+                <Link
+                  href="/sermon-column/worship-and-praise"
+                  className={
+                    router.asPath.includes("worship-and-praise")
+                      ? styles.selected
+                      : null
+                  }
+                  onClick={handleClick}
+                >
+                  경배와 찬양
                 </Link>
               </div>
             </li>

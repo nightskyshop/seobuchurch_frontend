@@ -91,7 +91,10 @@ export default function Home() {
           </div>
 
           <div className={styles.section__box}>
-            <Link href="/not-ready" className={styles.section__link}>
+            <Link
+              href="/sermon-column/worship-and-praise"
+              className={styles.section__link}
+            >
               <Image src="/btns/5.png" width={100} height={100} alt="찬양" />
               <h3>찬양</h3>
               <span className={styles.link_text}>바로가기</span>
