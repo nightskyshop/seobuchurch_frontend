@@ -150,7 +150,7 @@ export default function WorshipInfo() {
             </td>
             <td>
               <div>
-                <span>일</span>
+                <span>월</span>
                 <span>~</span>
                 <span>금</span>
                 <span>5</span>
